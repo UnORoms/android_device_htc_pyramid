@@ -43,14 +43,25 @@ PRODUCT_COPY_FILES += \
     device/htc/pyramid/recovery/sbin/htcbatt:recovery/root/sbin/htcbatt \
     device/htc/pyramid/recovery/etc/twrp.fstab:recovery/root/etc/twrp.fstab
 
+# Recovery
+PRODUCT_PACKAGES += \
+    lpm.rc \
+    init.recovery.pyramid.rc \
+    twrp.fstab \
+    choice_fn \
+    power_test \
+    offmode_charging \
+    htcbatt
 
-# Keylayouts and Keychars
+# Keylayouts and Key Character Maps
 PRODUCT_COPY_FILES += \
-    device/htc/pyramid/keychars/pyramid-keypad.kcm:system/usr/keychars/pyramid-keypad.kcm \
-    device/htc/pyramid/keylayout/AVRCP.kl:system/usr/keylayout/AVRCP.kl \
+    device/htc/pyramid/keylayout/pmic8xxx_pwrkey.kl:system/usr/keylayout/pmic8xxx_pwrkey.kl \
     device/htc/pyramid/keylayout/cy8c-touchscreen.kl:system/usr/keylayout/cy8c-touchscreen.kl \
     device/htc/pyramid/keylayout/h2w_headset.kl:system/usr/keylayout/h2w_headset.kl \
-    device/htc/pyramid/keylayout/pyramid-keypad.kl:system/usr/keylayout/pyramid-keypad.kl
+    device/htc/pyramid/keylayout/keypad_8660.kl:system/usr/keylayout/keypad_8660.kl \
+    device/htc/pyramid/keylayout/pmic8xxx_pwrkey.kcm:system/usr/keychars/pmic8xxx_pwrkey.kcm \
+    device/htc/pyramid/keylayout/h2w_headset.kcm:system/usr/keychars/h2w_headset.kcm \
+    device/htc/pyramid/keylayout/keypad_8660.kcm:system/usr/keychars/keypad_8660.kcm
 
 # Input device config
 PRODUCT_COPY_FILES += \
