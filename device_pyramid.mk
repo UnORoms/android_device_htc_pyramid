@@ -105,6 +105,9 @@ PRODUCT_COPY_FILES += \
 # Bluetooth firmware
 $(call inherit-product, device/htc/msm8660-common/bcm_hcd.mk)
 
+# System properties
+-include $(LOCAL_PATH)/system_prop.mk
+
 ## misc
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.setupwizard.enable_bypass=1 \
