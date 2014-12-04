@@ -5,11 +5,6 @@
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=240
 
-# radio
-PRODUCT_PROPERTY_OVERRIDES += \
-    mobiledata.interfaces=rmnet0 \
-    rild.libpath=/system/lib/libhtc_ril.so \
-
 # wifi
 PRODUCT_PROPERTY_OVERRIDES += \
     wifi.interface=wlan0
