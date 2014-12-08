@@ -207,4 +207,16 @@
     <!-- Is the notification LED intrusive? Used to decide if there should be a disable option -->
     <bool name="config_intrusiveNotificationLed">true</bool>
 
+    <!-- Maximum number of supported users -->
+    <integer name="config_multiuserMaximumUsers">4</integer>
+    <!-- Whether Multiuser UI should be shown -->
+    <bool name="config_enableMultiUserUI">true</bool>
+
+    <!-- Device supports LED flashlight -->
+<!--    <bool name="config_enableTorch">true</bool> -->
+
+    <!-- Enable the option to check proximity sensor when deciding whether to turn the screen on
+         NOTE ! - Enable for devices that have a fast response proximity sensor -->
+<!--    <bool name="config_proximityCheckOnWake">true</bool> -->
+
 </resources>
