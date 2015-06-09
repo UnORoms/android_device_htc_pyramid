@@ -105,6 +105,10 @@ PRODUCT_COPY_FILES += \
 # Bluetooth firmware
 $(call inherit-product, device/htc/msm8660-common/bcm_hcd.mk)
 
+# Bluetooth
+PRODUCT_PACKAGES += \
+    bt_vendor.conf
+
 # System properties
 -include $(LOCAL_PATH)/system_prop.mk
 
