@@ -62,6 +62,9 @@ TARGET_HAS_NO_BLUE_LED := true
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/htc/pyramid/bluetooth/include
 BOARD_BLUEDROID_VENDOR_CONF := device/htc/pyramid/bluetooth/vnd_pyramid.txt
 BOARD_BLUETOOTH_USES_HCIATTACH_PROPERTY := false
+BOARD_HAVE_BLUETOOTH := true
+BPLUS_FM_INCLUDED := true
+BLUEDROID_EXTRA_BPLUS_STATIC_LINKING := true
 
 # Bluetooth/Wifi
 -include device/htc/msm8660-common/bcmdhd.mk

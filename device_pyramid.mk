@@ -43,6 +43,12 @@ PRODUCT_COPY_FILES += \
     device/htc/pyramid/recovery/sbin/htcbatt:recovery/root/sbin/htcbatt \
     device/htc/pyramid/recovery/etc/twrp.fstab:recovery/root/etc/twrp.fstab
 
+# FM
+PRODUCT_PACKAGES += \
+    com.broadcom.bt \
+    com.broadcom.bt.xml \
+    FmRadio \
+
 # Recovery
 PRODUCT_PACKAGES += \
     lpm.rc \

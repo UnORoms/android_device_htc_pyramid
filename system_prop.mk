@@ -4,6 +4,9 @@
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=240
+# FM
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.broadcombplus.enabled=true
 
 # wifi
 PRODUCT_PROPERTY_OVERRIDES += \
