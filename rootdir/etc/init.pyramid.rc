@@ -1,6 +1,8 @@
 import init.pyramid.usb.rc
 
 on init
+    export LD_PRELOAD /system/lib/libhtc_symbols.so
+
     mkdir /devlog 0700 root root
     mkdir /mnt/media_rw/sdcard0 0700 media_rw media_rw
 
@@ -205,8 +207,13 @@ on boot
     write /sys/module/cpu_boost/parameters/input_boost_ms 40
 
 # Services start here
+service sensorservice /system/bin/sensorservice
+    class late_start
+    user root
+    group root
+
 service qcamerasvr /system/bin/mm-qcamera-daemon
-    class main
+    class late_start
     user system
     group system camera inet
 
