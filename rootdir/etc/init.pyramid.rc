@@ -6,19 +6,15 @@ on init
     mkdir /devlog 0700 root root
     mkdir /mnt/media_rw/sdcard0 0700 media_rw media_rw
 
-    mkdir /storage/sdcard0 0700 root root
-
     # for backwards compatibility
-    symlink /storage/sdcard0 /sdcard
-    symlink /storage/sdcard0 /mnt/sdcard
+    symlink /sdcard /mnt/sdcard
+    symlink /sdcard /storage/sdcard0
 		 
     setprop ro.usb.idproduct.ums 0c86
     setprop ro.usb.idproduct.rndis 0c86
     setprop ro.usb.idproduct.mtp 0f87
     setprop ro.usb.idproduct.mtp_adb 0f87
     setprop ro.usb.idproduct.ptp 0f87
-
-    export EXTERNAL_STORAGE /storage/sdcard0    
 
 on fs
 
@@ -294,10 +290,6 @@ service iprenew_wlan0 /system/bin/dhcpcd -n
 	disabled
 	oneshot
 # wifi--
-
-service fuse_sdcard0 /system/bin/sdcard -u 1023 -g 1023 -d /mnt/media_rw/sdcard0 /storage/sdcard0
-        class late_start
-        disabled
 
 on property:init.svc.bootanim=stopped
     start qcom-post-boot
