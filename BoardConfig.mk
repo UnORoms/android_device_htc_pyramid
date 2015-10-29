@@ -44,6 +44,7 @@ TARGET_RECOVERY_INITRC := device/htc/pyramid/recovery/init.rc
 
 # Misc
 BOARD_SUPPRESS_EMMC_WIPE := true
+TARGET_BOOTANIMATION_HALF_RES := true
 
 # GPS
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := pyramid
