@@ -83,9 +83,16 @@ BOARD_CACHEIMAGE_PARTITION_SIZE := 125787136
 BOARD_FLASH_BLOCK_SIZE := 262144
 
 # Twrp
-DEVICE_RESOLUTION = 540x960
-BOARD_HAS_NO_REAL_SDCARD := false
+TARGET_RECOVERY_DEVICE_MODULES += chargeled
+
+TARGET_RECOVERY_DEVICE_DIRS += device/htc/pyramid
+
+TW_THEME := portrait_mdpi
 TW_NO_SCREEN_BLANK := true
 HAVE_SELINUX := true
 TW_BRIGHTNESS_PATH := "/sys/class/leds/lcd-backlight/brightness"
 TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/devices/platform/msm_hsusb/gadget/lun0/file"
+TW_INCLUDE_CRYPTO := true
+TW_INCLUDE_DUMLOCK := true
+TW_NEW_ION_HEAP := true
+TW_INCLUDE_NTFS_3G := true
