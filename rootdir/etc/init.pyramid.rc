@@ -6,6 +6,9 @@ on init
     mkdir /devlog 0700 root root
     mkdir /mnt/media_rw/sdcard0 0700 media_rw media_rw
 
+    # By default, primary storage is physical
+    setprop ro.vold.primary_physical 1
+
     # for backwards compatibility
     symlink /sdcard /mnt/sdcard
     symlink /sdcard /storage/sdcard0
