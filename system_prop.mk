@@ -14,5 +14,4 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # UMS
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.sys.usb.config=mtp \
     ro.vold.umsdirtyratio=20
