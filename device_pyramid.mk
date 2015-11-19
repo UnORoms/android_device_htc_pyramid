@@ -26,6 +26,7 @@ DEVICE_PACKAGE_OVERLAYS += device/htc/pyramid/overlay
 PRODUCT_PACKAGES += \
     fstab.pyramid \
     init.pyramid.rc \
+    init.qcom.power.rc \
     init.pyramid.usb.rc \
     ueventd.pyramid.rc \
     gps.pyramid

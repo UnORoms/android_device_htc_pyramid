@@ -1,3 +1,4 @@
+import init.qcom.power.rc
 import init.pyramid.usb.rc
 
 on init
